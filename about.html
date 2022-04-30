@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog-App | About</title>
+    
+    <link rel="icon" href="public/css/favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="public/css/styles.css">
+</head>
+<body >
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Blog-App</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li ><a href="/">Home</a></li>
+                <li class="active"><a href="/about">About</a></li>&nbsp;
+                <form style="display: inline;" action="/compose" method="post">
+                    <button id="compose" type="submit" class="btn btn-primary" style="margin-top: 7px;">Compose</button>
+                </form>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <div class="alert alert-primary About" role="alert">
+        This web application is useful for creating blogs. Blogs can be either added
+        or deleted. It can also be served as a To-do-list application. The languages and
+        frameworks used in making this are HTML, CSS, JavaScript, EJS, NodeJs, Express
+        and MongoDB. Hope you like it.
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog-App | Compose</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="icon" href="public/css/favicon.ico">
+  <link rel="stylesheet" href="public/css/styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Blog-App</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li ><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>&nbsp;
+            <form style="display: inline;" action="/compose" method="post">
+                <button id="compose" type="submit" class="btn btn-primary" style="margin-top: 7px;">Compose</button>
+            </form>
+        </ul>
+    </div>
+    </nav>
+
+    <br>
+    <br>
+    <form style="margin:20px;" action="/" method="post">
+        <div class="form-group">
+          <label for="blog-title" style="font-size: 18px;">Title</label>
+          <input name = "inp" style="font-size: 18px;"type="text" class="form-control" id="add-blog-title"  placeholder="Title">
+        </div>
+        <div class="form-group">
+          <label for="blog" style="font-size: 18px;">BLOG</label>
+          <textarea name = "tex" style="height: 200px; font-size: 18px;" type="password" class="form-control" id="new-blog" placeholder="Enter Blog"></textarea>
+        </div>
+        <button style="font-size: 18px;" type="submit" class="btn btn-primary">ADD</button>
+    </form>
+</body>
+</html>

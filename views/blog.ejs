@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog-App | Home</title>
+    <link rel="icon" href="public/css/favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="/css/styles.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <style>
+        .jumbotron h1{
+            font-family: 'Courier Prime', monospace;
+            font-size: 32px;
+        }
+        .jumbotron p{
+            font-family: 'Open Sans', sans-serif;
+            font-size: 25px;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body style="background-color: lightblue;">
+    
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Blog-App</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="/about">About</a></li>&nbsp;
+                <form style="display: inline;" action="/compose" method="post">
+                    <button id="compose" type="submit" class="btn btn-primary" style="margin-top: 7px;">Compose</button>
+                </form>
+            </ul>
+        </div>
+    </nav>
+    <% for(let i=0;i<bb.length;i++){ %>
+
+        <form id="blogg" action="/delete" method="post">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">  <%=bb[i][0]%></h1>
+                    <p class="lead">
+                        <%= bb[i][1] %>
+                    </p>
+                    <button type="submit" name="button" class="btn btn-primary"  value=<%=i %>  >Delete Blog</button>
+                </div>
+              </div> 
+        </form>
+        <br>
+      <% } %>
+</body>
+
+</html>
